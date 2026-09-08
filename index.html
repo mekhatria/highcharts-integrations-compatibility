@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highcharts React Compatibility</title>
+</head>
+<body>
+<div class="hcr-compat">
+  <style>
+    .hcr-compat {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hcr-compat table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .hcr-compat caption {
+      text-align: left;
+      font-size: 13px;
+      color: #57606a;
+      margin-bottom: 8px;
+      caption-side: top;
+    }
+    .hcr-compat th, .hcr-compat td {
+      border: 1px solid #d0d7de;
+      padding: 8px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .hcr-compat thead th {
+      background: #f6f8fa;
+      font-weight: 600;
+    }
+    .hcr-compat tr.hcr-latest td {
+      background: #f0fff4;
+    }
+    .hcr-compat tr.hcr-broken td {
+      color: #8b949e;
+    }
+    .hcr-compat tr.hcr-section-header td {
+      background: #eaeef2;
+      font-weight: 600;
+      color: #24292f;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .hcr-compat .hcr-note {
+      font-size: 12px;
+      color: #57606a;
+    }
+    .hcr-compat .hcr-links {
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .hcr-compat .hcr-footer {
+      font-size: 12px;
+      color: #57606a;
+      margin-top: 10px;
+    }
+    .hcr-compat a {
+      color: #0969da;
+      text-decoration: none;
+    }
+    .hcr-compat a:hover {
+      text-decoration: underline;
+    }
+    .hcr-compat code {
+      background: #f6f8fa;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+  </style>
+
+  <table>
+    <caption>
+      Peer dependency ranges as published on npm. Verified against each version's <code>package.json</code>. Version links go to npm; "notes" links go to the changelog entry, where one exists.
+    </caption>
+    <thead>
+      <tr>
+        <th>Package version</th>
+        <th>Highcharts</th>
+        <th>React</th>
+        <th>Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hcr-section-header"><td colspan="4">@highcharts/react (current, preview)</td></tr>
+      <tr class="hcr-latest">
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/5.3.0" target="_blank" rel="noopener"><code>5.3.0</code></a></td>
+        <td><code>&gt;=13.0.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links">Latest &middot; <a href="https://www.npmjs.com/package/@highcharts/react/v/5.3.0" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/5.2.2" target="_blank" rel="noopener"><code>5.2.2</code></a></td>
+        <td><code>&gt;=13.0.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/5.2.2" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/5.2.1" target="_blank" rel="noopener"><code>5.2.1</code></a></td>
+        <td><code>&gt;=12.0.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/5.2.1" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/5.2.0" target="_blank" rel="noopener"><code>5.2.0</code></a></td>
+        <td><code>&gt;=12.0.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/5.2.0" target="_blank" rel="noopener">npm</a> &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md#v520" target="_blank" rel="noopener">notes</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/5.1.0" target="_blank" rel="noopener"><code>5.1.0</code></a></td>
+        <td><code>&gt;=12.0.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/5.1.0" target="_blank" rel="noopener">npm</a> &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md#v510" target="_blank" rel="noopener">notes</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/5.0.1" target="_blank" rel="noopener"><code>5.0.1</code></a></td>
+        <td><code>&gt;=12.0.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/5.0.1" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/5.0.0" target="_blank" rel="noopener"><code>5.0.0</code></a></td>
+        <td><code>&gt;=12.0.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/5.0.0" target="_blank" rel="noopener">npm</a> &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md#v500" target="_blank" rel="noopener">notes</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/4.2.1" target="_blank" rel="noopener"><code>4.2.1</code></a></td>
+        <td><code>&gt;=12.0.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/4.2.1" target="_blank" rel="noopener">npm</a> &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md#v421" target="_blank" rel="noopener">notes</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/4.2.0" target="_blank" rel="noopener"><code>4.2.0</code></a></td>
+        <td><code>&gt;=12.0.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/4.2.0" target="_blank" rel="noopener">npm</a> &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md#v420" target="_blank" rel="noopener">notes</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/4.1.0" target="_blank" rel="noopener"><code>4.1.0</code></a></td>
+        <td><code>&gt;=12.0.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/4.1.0" target="_blank" rel="noopener">npm</a> &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md#v410" target="_blank" rel="noopener">notes</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/4.0.1" target="_blank" rel="noopener"><code>4.0.1</code></a></td>
+        <td><code>&gt;=11.3.0</code></td>
+        <td><code>&gt;=18</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/4.0.1" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr class="hcr-broken">
+        <td><code>4.0.0</code></td>
+        <td>&mdash;</td>
+        <td>&mdash;</td>
+        <td class="hcr-note">No peer dependencies declared on npm &mdash; avoid this version</td>
+      </tr>
+
+      <tr class="hcr-section-header"><td colspan="4">highcharts-react-official (legacy integration)</td></tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/highcharts-react-official/v/3.2.3" target="_blank" rel="noopener"><code>3.0.0 &ndash; 3.2.3</code></a></td>
+        <td><code>&gt;=6.0.0</code></td>
+        <td><code>&gt;=16.8.0</code></td>
+        <td class="hcr-links">Latest is 3.2.3 &middot; <a href="https://www.npmjs.com/package/highcharts-react-official/v/3.2.3" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/highcharts-react-official/v/2.2.2" target="_blank" rel="noopener"><code>2.1.0 &ndash; 2.2.2</code></a></td>
+        <td><code>&gt;=5.0.0</code></td>
+        <td><code>&gt;=16.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-react-official/v/2.2.2" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/highcharts-react-official/v/2.0.0" target="_blank" rel="noopener"><code>0.0.1 &ndash; 2.0.0</code></a></td>
+        <td>Not declared</td>
+        <td>Not declared</td>
+        <td class="hcr-note">Tested against React 15.5.4&ndash;16.4 in dev, no enforced peer range</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="hcr-footer">
+    Source of truth: <a href="https://www.npmjs.com/package/@highcharts/react/v/5.3.0" target="_blank" rel="noopener">npm &ndash; @highcharts/react v5.3.0</a>
+    &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md" target="_blank" rel="noopener">Full changelog</a>
+    &middot; <a href="https://www.npmjs.com/package/highcharts-react-official" target="_blank" rel="noopener">npm &ndash; highcharts-react-official</a>
+  </div>
+</div>
+</body>
+</html>
