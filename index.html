@@ -3,20 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Highcharts React Compatibility</title>
+<title>Highcharts Integration Compatibility</title>
 </head>
 <body>
 <div class="hcr-compat">
   <style>
     .hcr-compat {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
+    }
+    .hcr-compat h2 {
+      font-size: 20px;
+      margin: 32px 0 4px;
+      border-bottom: 2px solid #d0d7de;
+      padding-bottom: 6px;
+    }
+    .hcr-compat h2:first-of-type { margin-top: 0; }
+    .hcr-compat .hcr-intro {
+      font-size: 13px;
+      color: #57606a;
+      margin: 4px 0 10px;
     }
     .hcr-compat table {
       width: 100%;
       border-collapse: collapse;
       font-size: 14px;
+      margin-bottom: 8px;
     }
     .hcr-compat caption {
       text-align: left;
@@ -59,7 +72,15 @@
     .hcr-compat .hcr-footer {
       font-size: 12px;
       color: #57606a;
-      margin-top: 10px;
+      margin-top: 8px;
+    }
+    .hcr-compat .hcr-callout {
+      font-size: 13px;
+      background: #fff8e6;
+      border: 1px solid #f0d68a;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 8px 0 16px;
     }
     .hcr-compat a {
       color: #0969da;
@@ -74,19 +95,35 @@
       border-radius: 4px;
       font-size: 13px;
     }
+    .hcr-compat nav.hcr-toc {
+      font-size: 13px;
+      margin-bottom: 24px;
+      padding: 10px 14px;
+      background: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+    }
+    .hcr-compat nav.hcr-toc a { margin-right: 12px; }
   </style>
 
+  <nav class="hcr-toc">
+    <strong>Jump to:</strong>
+    <a href="#hcr-react">React</a>
+    <a href="#hcr-angular">Angular</a>
+    <a href="#hcr-vue">Vue</a>
+    <a href="#hcr-typescript">TypeScript</a>
+    <a href="#hcr-javascript">JavaScript</a>
+    <a href="#hcr-flutter">Flutter</a>
+    <a href="#hcr-node">Node.js</a>
+    <a href="#hcr-python">Python</a>
+    <a href="#hcr-svelte">Svelte</a>
+  </nav>
+
+  <h2 id="hcr-react">React</h2>
+  <p class="hcr-intro">Peer dependency ranges as published on npm. Version links go to npm; "notes" links go to the changelog entry, where one exists.</p>
   <table>
-    <caption>
-      Peer dependency ranges as published on npm. Verified against each version's <code>package.json</code>. Version links go to npm; "notes" links go to the changelog entry, where one exists.
-    </caption>
     <thead>
-      <tr>
-        <th>Package version</th>
-        <th>Highcharts</th>
-        <th>React</th>
-        <th>Links</th>
-      </tr>
+      <tr><th>Package version</th><th>Highcharts</th><th>React</th><th>Links</th></tr>
     </thead>
     <tbody>
       <tr class="hcr-section-header"><td colspan="4">@highcharts/react (current, preview)</td></tr>
@@ -139,12 +176,6 @@
         <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/4.2.1" target="_blank" rel="noopener">npm</a> &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md#v421" target="_blank" rel="noopener">notes</a></td>
       </tr>
       <tr>
-        <td><a href="https://www.npmjs.com/package/@highcharts/react/v/4.2.0" target="_blank" rel="noopener"><code>4.2.0</code></a></td>
-        <td><code>&gt;=12.0.0</code></td>
-        <td><code>&gt;=18</code></td>
-        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/4.2.0" target="_blank" rel="noopener">npm</a> &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md#v420" target="_blank" rel="noopener">notes</a></td>
-      </tr>
-      <tr>
         <td><a href="https://www.npmjs.com/package/@highcharts/react/v/4.1.0" target="_blank" rel="noopener"><code>4.1.0</code></a></td>
         <td><code>&gt;=12.0.0</code></td>
         <td><code>&gt;=18</code></td>
@@ -156,40 +187,214 @@
         <td><code>&gt;=18</code></td>
         <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/react/v/4.0.1" target="_blank" rel="noopener">npm</a></td>
       </tr>
-      <tr class="hcr-broken">
-        <td><code>4.0.0</code></td>
-        <td>&mdash;</td>
-        <td>&mdash;</td>
-        <td class="hcr-note">No peer dependencies declared on npm &mdash; avoid this version</td>
-      </tr>
-
       <tr class="hcr-section-header"><td colspan="4">highcharts-react-official (legacy integration)</td></tr>
       <tr>
-        <td><a href="https://www.npmjs.com/package/highcharts-react-official/v/3.2.3" target="_blank" rel="noopener"><code>3.0.0 &ndash; 3.2.3</code></a></td>
+        <td><a href="https://www.npmjs.com/package/highcharts-react-official/v/3.2.3" target="_blank" rel="noopener"><code>3.0.0&ndash;3.2.3</code></a></td>
         <td><code>&gt;=6.0.0</code></td>
         <td><code>&gt;=16.8.0</code></td>
         <td class="hcr-links">Latest is 3.2.3 &middot; <a href="https://www.npmjs.com/package/highcharts-react-official/v/3.2.3" target="_blank" rel="noopener">npm</a></td>
       </tr>
       <tr>
-        <td><a href="https://www.npmjs.com/package/highcharts-react-official/v/2.2.2" target="_blank" rel="noopener"><code>2.1.0 &ndash; 2.2.2</code></a></td>
+        <td><a href="https://www.npmjs.com/package/highcharts-react-official/v/2.2.2" target="_blank" rel="noopener"><code>2.1.0&ndash;2.2.2</code></a></td>
         <td><code>&gt;=5.0.0</code></td>
         <td><code>&gt;=16.0</code></td>
         <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-react-official/v/2.2.2" target="_blank" rel="noopener">npm</a></td>
       </tr>
+    </tbody>
+  </table>
+  <div class="hcr-footer">
+    Source: <a href="https://www.npmjs.com/package/@highcharts/react/v/5.3.0" target="_blank" rel="noopener">npm &ndash; @highcharts/react</a> &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a> &middot; <a href="https://www.npmjs.com/package/highcharts-react-official" target="_blank" rel="noopener">npm &ndash; highcharts-react-official</a>
+  </div>
+
+  <h2 id="hcr-angular">Angular</h2>
+  <p class="hcr-intro">Peer dependency ranges for <code>highcharts-angular</code>, straight from npm.</p>
+  <table>
+    <thead>
+      <tr><th>Package version</th><th>Highcharts</th><th>Angular</th><th>Links</th></tr>
+    </thead>
+    <tbody>
+      <tr class="hcr-latest">
+        <td><a href="https://www.npmjs.com/package/highcharts-angular/v/5.4.1" target="_blank" rel="noopener"><code>5.4.1</code></a></td>
+        <td><code>&gt;=12.2.0</code></td>
+        <td><code>&gt;=19.0.0</code></td>
+        <td class="hcr-links">Latest &middot; <a href="https://www.npmjs.com/package/highcharts-angular/v/5.4.1" target="_blank" rel="noopener">npm</a></td>
+      </tr>
       <tr>
-        <td><a href="https://www.npmjs.com/package/highcharts-react-official/v/2.0.0" target="_blank" rel="noopener"><code>0.0.1 &ndash; 2.0.0</code></a></td>
-        <td>Not declared</td>
-        <td>Not declared</td>
-        <td class="hcr-note">Tested against React 15.5.4&ndash;16.4 in dev, no enforced peer range</td>
+        <td><a href="https://www.npmjs.com/package/highcharts-angular/v/5.0.0" target="_blank" rel="noopener"><code>5.0.0&ndash;5.4.0</code></a></td>
+        <td><code>&gt;=12.2.0</code></td>
+        <td><code>&gt;=19.0.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-angular/v/5.4.0" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/highcharts-angular/v/4.0.1" target="_blank" rel="noopener"><code>4.0.0&ndash;4.0.1</code></a></td>
+        <td><code>&gt;=9.0.0</code></td>
+        <td><code>&gt;=16.0.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-angular/v/4.0.1" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/highcharts-angular/v/3.1.2" target="_blank" rel="noopener"><code>3.1.0&ndash;3.1.2</code></a></td>
+        <td><code>&gt;=9.0.0</code></td>
+        <td><code>&gt;=11.0.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-angular/v/3.1.2" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/highcharts-angular/v/3.0.0" target="_blank" rel="noopener"><code>3.0.0</code></a></td>
+        <td><code>&gt;=6.0.0</code></td>
+        <td><code>&gt;=9.0.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-angular/v/3.0.0" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/highcharts-angular/v/2.10.0" target="_blank" rel="noopener"><code>2.6.0&ndash;2.10.0</code></a></td>
+        <td><code>&gt;=6.0.0</code></td>
+        <td><code>&gt;=6.0.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-angular/v/2.10.0" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="hcr-footer">Source: <a href="https://www.npmjs.com/package/highcharts-angular" target="_blank" rel="noopener">npm &ndash; highcharts-angular</a></div>
+
+  <h2 id="hcr-vue">Vue</h2>
+  <p class="hcr-intro">Peer dependency ranges for <code>highcharts-vue</code>, straight from npm.</p>
+  <table>
+    <thead>
+      <tr><th>Package version</th><th>Highcharts</th><th>Vue</th><th>Links</th></tr>
+    </thead>
+    <tbody>
+      <tr class="hcr-latest">
+        <td><a href="https://www.npmjs.com/package/highcharts-vue/v/2.0.2" target="_blank" rel="noopener"><code>2.0.0&ndash;2.0.2</code></a></td>
+        <td><code>&gt;=5.0.0</code></td>
+        <td><code>&gt;=3.0.0</code></td>
+        <td class="hcr-links">Latest &middot; <a href="https://www.npmjs.com/package/highcharts-vue/v/2.0.2" target="_blank" rel="noopener">npm</a> &middot; Vue 3 only</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/highcharts-vue/v/1.4.3" target="_blank" rel="noopener"><code>1.0.0&ndash;1.4.3</code></a></td>
+        <td><code>&gt;=5.0.0</code></td>
+        <td><code>&gt;=1.0.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-vue/v/1.4.3" target="_blank" rel="noopener">npm</a> &middot; Vue 2 line</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="hcr-callout">Vue major-version split: use <code>2.x</code> of the wrapper for Vue 3 apps, <code>1.x</code> for Vue 2 apps.</div>
+  <div class="hcr-footer">Source: <a href="https://www.npmjs.com/package/highcharts-vue" target="_blank" rel="noopener">npm &ndash; highcharts-vue</a></div>
+
+  <h2 id="hcr-typescript">TypeScript</h2>
+  <div class="hcr-callout">
+    There's no separate npm package here &mdash; the core <code>highcharts</code> package ships its own bundled <code>.d.ts</code> declarations (since Highcharts 7), so there's no peer-dependency table to publish. Two things worth knowing instead:
+  </div>
+  <table>
+    <thead><tr><th>Topic</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td>Minimum setup</td><td>Any recent TypeScript version works with editor autocomplete once <code>highcharts</code> is installed via npm (CDN-only usage has no type declarations available).</td></tr>
+      <tr><td>TypeScript 5+</td><td>Requires setting <code>"moduleResolution": "bundler"</code> in <code>tsconfig.json</code> for the declarations to resolve correctly.</td></tr>
+    </tbody>
+  </table>
+  <div class="hcr-footer">Source: <a href="https://www.highcharts.com/docs/advanced-chart-features/highcharts-typescript-declarations" target="_blank" rel="noopener">Highcharts TypeScript declarations docs</a></div>
+
+  <h2 id="hcr-javascript">JavaScript (core)</h2>
+  <div class="hcr-callout">
+    This is the base <code>highcharts</code> npm package itself, not a framework wrapper &mdash; so there's no peer dependency to report. It works in any modern browser/bundler; the relevant "version" question is just which Highcharts release you're on.
+  </div>
+  <table>
+    <thead><tr><th>Version</th><th>Notes</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr class="hcr-latest">
+        <td><code>13.0.2</code></td>
+        <td>Latest</td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts" target="_blank" rel="noopener">npm</a> &middot; <a href="https://changelog.highcharts.com/" target="_blank" rel="noopener">changelog</a></td>
       </tr>
     </tbody>
   </table>
 
-  <div class="hcr-footer">
-    Source of truth: <a href="https://www.npmjs.com/package/@highcharts/react/v/5.3.0" target="_blank" rel="noopener">npm &ndash; @highcharts/react v5.3.0</a>
-    &middot; <a href="https://github.com/highcharts/highcharts-react/blob/master/CHANGELOG.md" target="_blank" rel="noopener">Full changelog</a>
-    &middot; <a href="https://www.npmjs.com/package/highcharts-react-official" target="_blank" rel="noopener">npm &ndash; highcharts-react-official</a>
+  <h2 id="hcr-flutter">Flutter</h2>
+  <div class="hcr-callout">
+    Officially out of beta as of late 2025. Package: <code>highcharts_flutter</code> on pub.dev, published by the verified <code>highcharts.com</code> account.
   </div>
+  <table>
+    <thead><tr><th>Version</th><th>Notes</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr class="hcr-latest">
+        <td><code>1.2.0</code></td>
+        <td>Latest, supports Android/iOS/Web. Exact Dart/Flutter SDK floor isn't published separately by Highsoft &mdash; check <code>pubspec.yaml</code> on install.</td>
+        <td class="hcr-links"><a href="https://pub.dev/packages/highcharts_flutter" target="_blank" rel="noopener">pub.dev</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="hcr-node">Node.js (Export Server)</h2>
+  <p class="hcr-intro">Node isn't a chart-rendering wrapper &mdash; this is Node engine support for <code>highcharts-export-server</code>, used for server-side/static chart generation.</p>
+  <table>
+    <thead>
+      <tr><th>Package version</th><th>Highcharts (bundled)</th><th>Node.js engine</th><th>Link</th></tr>
+    </thead>
+    <tbody>
+      <tr class="hcr-latest">
+        <td><code>6.0.0</code></td>
+        <td><code>^13.0.0</code></td>
+        <td><code>^22.22.2 || ^24.15.0 || &gt;=26.0.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-export-server/v/6.0.0" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><code>5.0.0&ndash;5.1.0</code></td>
+        <td><code>^12.4.0</code></td>
+        <td><code>&gt;=18.12.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-export-server/v/5.1.0" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><code>4.0.0&ndash;4.0.2</code></td>
+        <td>Not pinned</td>
+        <td><code>&gt;=18.12.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-export-server/v/4.0.2" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><code>3.0.0&ndash;3.1.1</code></td>
+        <td>Not pinned</td>
+        <td><code>&gt;=16.14.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/highcharts-export-server/v/3.1.1" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="hcr-footer">Source: <a href="https://www.npmjs.com/package/highcharts-export-server" target="_blank" rel="noopener">npm &ndash; highcharts-export-server</a></div>
+
+  <h2 id="hcr-python">Python</h2>
+  <div class="hcr-callout">
+    Official toolkit is <strong>Highcharts for Python</strong>: <code>pip install highcharts-core</code> (plus <code>highcharts-stock</code>, <code>highcharts-maps</code>, <code>highcharts-gantt</code> as extensions). This wraps the JS library rather than declaring a formal dependency on it, so compatibility is a stated floor, not an npm-style peer range.
+  </div>
+  <table>
+    <thead><tr><th>Package</th><th>Python version</th><th>Highcharts (JS) floor</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr class="hcr-latest">
+        <td><code>highcharts-core</code> 1.11.0</td>
+        <td><code>&gt;=3.10</code></td>
+        <td><code>&gt;=10.2</code></td>
+        <td class="hcr-links"><a href="https://pypi.org/project/highcharts-core/" target="_blank" rel="noopener">PyPI</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="hcr-footer">Source: <a href="https://pypi.org/project/highcharts-core/" target="_blank" rel="noopener">PyPI &ndash; highcharts-core</a></div>
+
+  <h2 id="hcr-svelte">Svelte</h2>
+  <p class="hcr-intro">Peer dependency ranges for <code>@highcharts/svelte</code>, straight from npm.</p>
+  <table>
+    <thead>
+      <tr><th>Package version</th><th>Highcharts</th><th>Svelte</th><th>Link</th></tr>
+    </thead>
+    <tbody>
+      <tr class="hcr-latest">
+        <td><a href="https://www.npmjs.com/package/@highcharts/svelte/v/1.1.1" target="_blank" rel="noopener"><code>1.1.1</code></a></td>
+        <td><code>&gt;11.0.0</code></td>
+        <td><code>&gt;=3.0.0</code></td>
+        <td class="hcr-links">Latest &middot; <a href="https://www.npmjs.com/package/@highcharts/svelte/v/1.1.1" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.npmjs.com/package/@highcharts/svelte/v/1.1.0" target="_blank" rel="noopener"><code>0.0.9&ndash;1.1.0</code></a></td>
+        <td><code>&gt;11.0.0</code></td>
+        <td><code>&gt;=3.0.0 &lt;5.0.0</code></td>
+        <td class="hcr-links"><a href="https://www.npmjs.com/package/@highcharts/svelte/v/1.1.0" target="_blank" rel="noopener">npm</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="hcr-footer">Source: <a href="https://www.npmjs.com/package/@highcharts/svelte" target="_blank" rel="noopener">npm &ndash; @highcharts/svelte</a></div>
+
 </div>
 </body>
 </html>
